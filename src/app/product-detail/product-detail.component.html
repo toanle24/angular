@@ -1,0 +1,14 @@
+<section class="text-gray-600 body-font overflow-hidden" >
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap" *ngIf="product">
+        <img alt="ecommerce" style="width:300px; height:500px" class="" 
+        src="{{product.img}}" >
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h1 style="font-size:300%;" class="text-sm title-font text-gray-900 tracking-widest">{{product.name}}</h1><br>
+          <span style="font-size:200%;"class="title-font font-medium text-2xl text-gray-900">${{product.price}}</span><br>
+          <br>
+         <button class="btn btn-primary">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </section>

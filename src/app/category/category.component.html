@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <button type="button" class="btn btn-primary" routerLink="/cate/add">
+          Add Category
+        </button>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cate of category; index as i">
+          <td>{{i + 1}}</td>
+          <td>{{cate.name}}</td>
+          
+          <td width="200">
+            <button class="btn btn-danger" (click)="cateRemove(cate.id)">
+              Delete
+            </button>
+            <button class="btn btn-info ms-2" routerLink="/cate/{{cate.id}}/edit">
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

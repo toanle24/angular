@@ -1,0 +1,16 @@
+<h2>Thêm sản phẩm</h2>
+<form action="">
+    <div class="mb-3">
+        <label for="">Produtc Name</label>
+        <input type="text" class="form-control" [(ngModel)]="product.name" name="name" />
+    </div>
+    <div class="mb-3">
+        <label for="">Image</label>
+        <input type="text" class="form-control" [(ngModel)]="product.img" name="img" />
+    </div>
+    <div class="mb-3">
+        <label for="">price</label>
+        <input type="number" class="form-control" [(ngModel)]="product.price" name="price" />
+    </div>
+    <button class="btn btn-primary" (click)="onAddProduct()">Add</button>
+</form>
